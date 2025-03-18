@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 20px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.tip {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tip:target {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Display the first tip by default */
+#tip1 {
+    display: block;
+}
+
+.tip h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tip p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+a.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+a.button:disabled,
+a.button[disabled] {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
