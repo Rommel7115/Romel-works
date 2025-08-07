@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="/static/css/login.css" rel="stylesheet">
+    <script src="{{url_for('static', filename='/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='/static/js/login.js')}}"></script>
+    
+</head>
+<body>
+<div class="container-fluid">
+    <h1>LOGIN</h1>
+    <div class="d-flex flex-column w-75">
+        <div class="form-group p-2">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group p-2">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="form-group p-2">
+            <span id="message" class="text-danger">Invalid username or password</span>
+        </div>
+        <div class="form-group p-2">
+            <button type="button" class="btn btn-primary">Login</button>
+        </div>
+    </div>
+</div>
+
+<script src="{{url_for('static', filename='/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>
